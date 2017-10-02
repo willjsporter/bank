@@ -1,14 +1,20 @@
+require 'bank'
+
 describe Bank do
 
-  context "#clients can make deposits" do
+let(:bank) { described_class.new }
 
+  context "#will store a balance" do
+    it "default balance is zero" do
+      expect(bank.balance).to eq 0
+    end
+  end
+
+  context "#clients can make deposits" do
+    
   end
 
   context "#clients can make withdrawals" do
-
-  end
-
-  context "#will store a balance and list of transactions" do
 
   end
 
