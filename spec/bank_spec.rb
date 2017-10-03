@@ -31,7 +31,7 @@ describe Bank do
   context "#clients can make withdrawals" do
     it "#balance decreases for withdrawals" do
       bank.withdraw(10)
-      expect(bank.balance).to eq -10
+      expect(bank.balance).to eq(-10)
     end
 
     it "#withdrawal transaction is stored in transaction array" do

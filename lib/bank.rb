@@ -8,12 +8,12 @@ class Bank
 
   def deposit(amt)
     @balance += amt
-    #the_time = Time.now.strftime("%d/%m/%Y")
-    @transactions << Transaction.new#{ time: Time.now, debit: amt, balance: @balance }
+    # the_time = Time.now.strftime("%d/%m/%Y")
+    @transactions << Transaction.new(amt, @balance)
   end
 
   def withdraw(amt)
     @balance -= amt
-    @transactions << Transaction.new #{ time: Time.now, credit: amt, balance: @balance }
+    @transactions << Transaction.new(-amt, @balance)
   end
 end

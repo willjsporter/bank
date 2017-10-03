@@ -113,6 +113,9 @@ AllCops:
 
 #################### Layout ###########################
 
+Documentation:
+  Enabled: false
+
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
   EnforcedStyle: indent
@@ -938,7 +941,7 @@ Style/HashSyntax:
   PreferHashRocketsForNonAlnumEndingSymbols: false
 
 Style/IfUnlessModifier:
-  MaxLineLength: 80
+  MaxLineLength: 100
 
 Style/InverseMethods:
   Enabled: true
@@ -1334,6 +1337,8 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   CountComments: false  # count full line comments?
   Max: 25
+  Exclude:
+    - 'spec/*.rb'
   ExcludedMethods: []
 
 Metrics/BlockNesting:
@@ -1349,7 +1354,7 @@ Metrics/CyclomaticComplexity:
   Max: 6
 
 Metrics/LineLength:
-  Max: 80
+  Max: 100
   # To make it possible to copy or click on URIs in the code, we allow lines
   # containing a URI to be longer than Max.
   AllowHeredoc: true
@@ -1571,11 +1576,12 @@ Rails/UniqBeforePluck:
     - aggressive
   AutoCorrect: false
 
-Rails/UnknownEnv:
-  Environments:
-    - development
-    - test
-    - production
+# Causing an error and only relates to rails
+# Rails/UnknownEnv:
+#   Environments:
+#     - development
+#     - test
+#     - production
 
 Rails/SkipsModelValidations:
   Blacklist:
