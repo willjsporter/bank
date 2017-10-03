@@ -24,6 +24,8 @@ let(:bank) { described_class.new }
     end
 
     it "#transaction is stored in transaction array" do
+      bank.deposit(10)
+      bank.deposit(20)
       expect(bank.transactions.length).to eq 2
     end
 
@@ -34,6 +36,12 @@ let(:bank) { described_class.new }
     it "#balance decreases for withdrawals" do
       bank.withdraw(10)
       expect(bank.balance).to eq -10
+    end
+
+    it "#withdrawal transaction is stored in transaction array" do
+      bank.deposit(10)
+      bank.withdraw(20)
+      expect(bank.transactions.length).to eq 2
     end
 
   end
