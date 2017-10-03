@@ -2,7 +2,7 @@
 require 'transaction'
 
 describe Transaction do
-  context '#Transaction is initized correctly' do
+  context '#Transaction is initialized correctly' do
     subject(:transaction) { described_class.new(-10, 110) }
 
     it "initializes with date" do
@@ -10,8 +10,8 @@ describe Transaction do
     end
 
     it "initializes with credit and debit amount (one of which is nil)" do
-      expect(transaction.debit).to be_nil
-      expect(transaction.credit).to eq 10
+      expect(transaction.debit).to eq 10
+      expect(transaction.credit).to be_nil
     end
 
     it "initializes with new balance" do
