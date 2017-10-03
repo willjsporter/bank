@@ -1,11 +1,10 @@
 require 'bank'
+require 'transaction'
 
 describe Bank do
-
-let(:bank) { described_class.new }
+  let(:bank) { described_class.new }
 
   context "#initializes with some attributes" do
-
     it "initial balance is zero" do
       expect(bank.balance).to eq 0
     end
@@ -14,7 +13,6 @@ let(:bank) { described_class.new }
       expect(bank.transactions.class).to eq Array
       expect(bank.transactions.length).to eq 0
     end
-
   end
 
   context "#clients can make deposits" do
@@ -28,11 +26,9 @@ let(:bank) { described_class.new }
       bank.deposit(20)
       expect(bank.transactions.length).to eq 2
     end
-
   end
 
   context "#clients can make withdrawals" do
-
     it "#balance decreases for withdrawals" do
       bank.withdraw(10)
       expect(bank.balance).to eq -10
@@ -43,11 +39,16 @@ let(:bank) { described_class.new }
       bank.withdraw(20)
       expect(bank.transactions.length).to eq 2
     end
+  end
 
+  context "#transactions are stored as instances of the 'Transaction' class" do
+    it "#transaction is stored in transaction array" do
+      bank.deposit(10)
+      ary_contains_transactions = bank.transactions.all? { |entry| entry.class == Transaction }
+      expect(ary_contains_transactions).to eq true
+    end
   end
 
   context "#the list of all transactions can be viewed" do
-
   end
-
 end

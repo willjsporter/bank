@@ -48,6 +48,7 @@ AllCops:
     - '**/Vagabondfile'
     - '**/Vagrantfile'
   Exclude:
+    - 'spec/spec_helper.rb'
     - 'node_modules/**/*'
     - 'vendor/**/*'
   # Default formatter will be used if no `-f/--format` option is given.
