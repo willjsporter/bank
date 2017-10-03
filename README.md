@@ -6,6 +6,18 @@ The aim of the project was to simulate a basic ATM/statement system - ie one tha
 
 `git clone https://github.com/willjsporter/bank.git`
 
+## Technologies
+
+Written in Ruby;
+
+Tested in Rspec;
+
+Linting checked with RuboCop;
+
+Coverage checked with SimpleCov;
+
+Complexity assessed with Flog.
+
 ##Usage
 <how to run> tbc...
 
