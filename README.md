@@ -4,9 +4,9 @@ The aim of the project was to simulate a basic ATM/statement system - ie one tha
 
 In the end, there were three classes created:
   1) An account class to act as a user's account class. New accounts are initialized with zero balance and all functionality of the project is run through this class.
-  The functions available (excluding private helper methods) are deposit, withdraw and statement (which prints the statement of transactions to date to the command line).
-  2) A transaction class: this stored all transactions as new objects in a specific format.
-  3) A Statement class: this did all the work behind printing a statement from a given bank account. The class is initialized with an ordered list of transactions (via an array) and then these can be printed via print_statement. However, this class need never be accessed outside of the Bank class as Bank's `statement` method utilises the full functionality of the Statement class.
+  The functions available (excluding private helper methods) are `deposit`, `withdraw` and `statement` (which prints the statement of transactions to date to the command line).
+  2) A transaction class: this stored all transactions as new objects in a specific format. All methods are private and are only used to ensure that a new `Transaction` is initialized in the correct format.
+  3) A Statement class: this did all the work behind printing a statement from a given bank account. The class is initialized with an ordered list of transactions (via an array) and then these can be printed via `print_statement`. However, this class need never be accessed outside of the Bank class as Bank's `statement` method utilises the full functionality of the Statement class.
 
 ## How to get me!
 
@@ -25,11 +25,11 @@ Coverage checked with SimpleCov;
 Complexity assessed with Flog.
 
 ##Usage
-Assuming we have an instance of Account: user_account = Account.new:
+Assuming we have an instance of Account: `user_account = Account.new`:
 
-Deposits - user_account.deposit(deposit_amount)
-Withdrawals - user_account.withdrawal(withdrawal_amount)
-Viewing statements - user_account.statement (no parameters are required for this).
+Deposits - `user_account.deposit(deposit_amount)`
+Withdrawals - `user_account.withdrawal(withdrawal_amount)`
+Viewing statements - `user_account.statement` (this method takes no parameters).
 
 ## Running Tests
 To run tests, use the `rspec` command from the root directory.
