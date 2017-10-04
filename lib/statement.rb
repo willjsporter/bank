@@ -1,5 +1,4 @@
 class Statement
-
   def initialize(trans_list)
     @trans_list = trans_list
   end
@@ -25,5 +24,4 @@ class Statement
       puts trans_to_string(h)
     end
   end
-
 end

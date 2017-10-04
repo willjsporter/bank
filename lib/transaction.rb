@@ -11,7 +11,7 @@ class Transaction
   end
 
   def deb_cred(amt)
-    amt <0 ? @debit = -amt : @credit = amt
+    amt < 0 ? @debit = -amt : @credit = amt
   end
 
   def datify

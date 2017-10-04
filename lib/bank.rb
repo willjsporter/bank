@@ -8,20 +8,20 @@ class Bank
   end
 
   def deposit(amt, trans = Transaction)
-    transaction(amt,trans)
+    transaction(amt, trans)
   end
-
 
   def withdraw(amt, trans = Transaction)
-    transaction(-amt,trans)
+    transaction(-amt, trans)
   end
 
-  def transaction(amt,trans)
+  def transaction(amt, trans)
     @balance += amt
-    @transactions.unshift(trans.new(amt, "#{'%.2f' % @balance}"))
+    @transactions.unshift(trans.new(amt, @balance))
   end
 
-  def print_statement
+  def statement(stmt = Statement)
+    show_bal = stmt.new(@transactions)
+    show_bal.print_statement
   end
-
 end
