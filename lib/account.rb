@@ -26,4 +26,6 @@ class Account
     show_bal = stmt.new(@transactions)
     show_bal.print_statement
   end
+
+  private :transaction
 end

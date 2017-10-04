@@ -5,8 +5,6 @@ class Statement
 
   def trans_to_string(trans)
     trans.date + p_value_or_nil(trans)
-    # "#{trans.date} || " +
-    # p_value_or_nil(trans.credit)+p_value_or_nil(trans.debit)#+"#{trans.balance}"
   end
 
   def p_value_or_nil(trans)
@@ -20,4 +18,6 @@ class Statement
       puts trans_to_string(h)
     end
   end
+
+  private :trans_to_string, :p_value_or_nil
 end
