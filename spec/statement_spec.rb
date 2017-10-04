@@ -8,8 +8,9 @@ describe Statement do
   end
 
   it '#can print a header' do
+    statement1 = described_class.new([])
     test_string = "date || credit || debit || balance\n"
-    expect { @statement.header }.to output(test_string).to_stdout
+    expect { statement1.print_statement }.to output(test_string).to_stdout
   end
 
   it '#prints the header and each line with most recent transaction first' do

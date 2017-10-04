@@ -133,11 +133,7 @@
       "/Users/will/Projects/MA-COURSE/week10/bank/lib/statement.rb": [
         1,
         1,
-        2,
-        null,
-        null,
-        1,
-        2,
+        3,
         null,
         null,
         1,
@@ -152,8 +148,8 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         2,
         null,
         null,
@@ -169,6 +165,7 @@
         2,
         null,
         null,
+        1,
         1,
         1,
         2,
@@ -213,6 +210,6 @@
         null
       ]
     },
-    "timestamp": 1507122651
+    "timestamp": 1507125766
   }
 }
