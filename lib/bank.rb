@@ -18,14 +18,10 @@ class Bank
 
   def transaction(amt,trans)
     @balance += amt
-    @transactions.unshift(trans.new(amt, @balance))
+    @transactions.unshift(trans.new(amt, "#{'%.2f' % @balance}"))
   end
 
   def print_statement
-  #   print_header
-  #   @transactions.each do |trans|
-  #     print trans.
-  #   end
   end
 
 end

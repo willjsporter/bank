@@ -8,14 +8,21 @@ class Statement
     puts 'date || credit || debit || balance'
   end
 
-  def hash_to_string(trans)
-    "#{trans.date} || #{trans.credit} || #{trans.debit} || #{trans.balance}"
+  def trans_to_string(trans)
+    trans.date + p_value_or_nil(trans)
+    # "#{trans.date} || " +
+    # p_value_or_nil(trans.credit)+p_value_or_nil(trans.debit)#+"#{trans.balance}"
+  end
+
+  def p_value_or_nil(trans)
+    deb = trans.debit
+    deb.nil? ? " || #{trans.credit} || || #{trans.balance}" : " || || #{deb} || #{trans.balance}"
   end
 
   def print_statement
     header
     @trans_list.each do |h|
-      puts hash_to_string(h)
+      puts trans_to_string(h)
     end
   end
 

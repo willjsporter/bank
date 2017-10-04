@@ -106,10 +106,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/will/Projects/MA-COURSE/week10/bank/lib/transaction.rb": [
@@ -137,7 +133,6 @@
         null
       ],
       "/Users/will/Projects/MA-COURSE/week10/bank/spec/statement_spec.rb": [
-        null,
         1,
         null,
         1,
@@ -175,6 +170,13 @@
         null,
         null,
         1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
         2,
         null,
         null,
@@ -217,6 +219,6 @@
         null
       ]
     },
-    "timestamp": 1507115966
+    "timestamp": 1507121526
   }
 }

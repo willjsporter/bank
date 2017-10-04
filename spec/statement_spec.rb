@@ -15,8 +15,8 @@ describe Statement do
 
   it '#prints the header and each line with most recent transaction first' do
     test_header = 'date || credit || debit || balance'
-    test_line1 = "02/10/2017 || 11 ||  || 111"
-    test_line2 = "03/10/2017 ||  || 7 || 104"
+    test_line1 = "02/10/2017 || 11 || || 111"
+    test_line2 = "03/10/2017 || || 7 || 104"
     test_string = "#{test_header}\n#{test_line2}\n#{test_line1}\n"
     expect { @statement.print_statement }.to output().to_stdout
   end
