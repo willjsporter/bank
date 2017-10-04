@@ -1,5 +1,7 @@
 require_relative 'transaction.rb'
-class Bank
+require_relative 'statement.rb'
+
+class Account
   attr_reader :balance, :transactions
 
   def initialize

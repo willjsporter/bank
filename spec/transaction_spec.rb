@@ -1,4 +1,3 @@
-# require 'bank'
 require 'transaction'
 
 describe Transaction do

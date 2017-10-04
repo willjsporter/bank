@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/will/Projects/MA-COURSE/week10/bank/spec/bank_spec.rb": [
+      "/Users/will/Projects/MA-COURSE/week10/bank/spec/account_spec.rb": [
         1,
         1,
         1,
@@ -77,8 +77,10 @@
         null,
         null
       ],
-      "/Users/will/Projects/MA-COURSE/week10/bank/lib/bank.rb": [
+      "/Users/will/Projects/MA-COURSE/week10/bank/lib/account.rb": [
         1,
+        1,
+        null,
         1,
         1,
         null,
@@ -181,7 +183,6 @@
         null
       ],
       "/Users/will/Projects/MA-COURSE/week10/bank/spec/transaction_spec.rb": [
-        null,
         1,
         null,
         1,
@@ -210,6 +211,6 @@
         null
       ]
     },
-    "timestamp": 1507125766
+    "timestamp": 1507126532
   }
 }
