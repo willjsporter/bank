@@ -3,10 +3,6 @@ class Statement
     @trans_list = trans_list
   end
 
-  def header
-    puts 'date || credit || debit || balance'
-  end
-
   def trans_to_string(trans)
     trans.date + p_value_or_nil(trans)
     # "#{trans.date} || " +
@@ -19,7 +15,7 @@ class Statement
   end
 
   def print_statement
-    header
+    puts 'date || credit || debit || balance'
     @trans_list.each do |h|
       puts trans_to_string(h)
     end
